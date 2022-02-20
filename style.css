@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .background-image {
   position: absolute;
   top: 0;
@@ -19,6 +20,7 @@ body {
   min-height: 350px;
   z-index: -1;
 }
+
 .background-image img {
   width: 100%;
   min-height: 350px;
@@ -74,8 +76,9 @@ body {
 }
 
 .check-mark:hover {
-   background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%); 
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
 }
+
 .new-todo-input {
   flex-grow: 1;
   display: flex;
@@ -100,30 +103,65 @@ body {
   color: hsl(233, 14%, 35%);
 }
 
-.todo-item:hover{
+.todo-item:hover {
   transform: translateY(-2);
   box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
+  border-color: hsl(235, 24%, 19%);
 }
 
-  .todo-item{
-width: 100%;
-display: flex;
-height: 70px;
-border-bottom: 1px solid hsl(237, 14%, 26%);
-
+.todo-item {
+  width: 100%;
+  display: flex;
+  height: 70px;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  z-index: -1;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.todo-text{
+.todo-text {
   display: flex;
   align-items: center;
   font-size: 18px;
+  z-index: 10;
   color: hsl(234, 39%, 85%);
 }
 
-.todo-items-wrapper{
+.todo-items-wrapper {
   margin-top: 30px;
   background-color: hsl(235, 24%, 19%);
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.4);
+}
+
+.todo-items-info {
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 0 30px;
+  color: hsl(233, 14%, 35%);
+}
+
+.items-statuses {
+  display: flex;
+  justify-content: center;
+}
+
+.items-statuses span {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.items-statuses span:hover,
+.items-statuses span.active,
+.items-clear:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.items-clear {
+  cursor: pointer;
+  text-align: end;
 }
