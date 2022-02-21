@@ -114,16 +114,16 @@ body {
   display: flex;
   height: 70px;
   border-bottom: 1px solid hsl(237, 14%, 26%);
-  z-index: -1;
   cursor: pointer;
   transition: all 0.25s ease;
+  background-color: hsl(235, 24%, 19%);
+  transition-property: box-shadow, transform, border-color;
 }
 
 .todo-text {
   display: flex;
   align-items: center;
   font-size: 18px;
-  z-index: 10;
   color: hsl(234, 39%, 85%);
 }
 
